@@ -1,0 +1,133 @@
+<html>
+<head>
+<link href="style1.css" rel="stylesheet"/>
+</head>
+	<body >
+<center> <div class="nav">
+    <div class="container">
+	<ul>
+	  <li><a href="home.html">Home</a></li>
+	  <li><a href="services.html">sevices</a></li>
+	  <li><a href="about.html">About</a></li>
+	 
+	
+	
+	 
+	  <li><a href="contact us.html">sign up</a></li>
+	  <li><a href="log in.html">log in</a></li>
+	  
+	</ul>
+
+    </div>
+    </div>
+	<div class="jumbotron">
+
+	<h1>Trip Cost</<h1>
+		<table > 
+			
+			<tr>
+				<td><span>contry name</span></td><td><span>fly</span></td><td><span>bus</spa></td>
+			</tr>
+			<tr>
+				<td>sharm </td><td>2000$</td><td>500$</td>
+			</tr>
+			<tr>
+				<td>louxour </td><td>3000$</td><td>700$</td>
+			</tr>
+			<tr>
+				<td>Aswan</td><td>4000$</td><td>1000$</td>
+			</tr>
+			<tr>
+				<td><select id="select" >
+<option value="choose">--choose--</option>
+<option name="cairo" id="cairo" value="cairo">cairo</option>
+
+<option name="ALex" id="alex" value="alex">Alex</option>
+<option name="sinai" id="sinai" value="sinai">sinai</option>
+<option name="USA" id="USA" value="USA">USA</option>
+<option name="turkeya" id="turkeya" value="turkeya">turkeya</option>
+<option name="kanda" id="kanda" value="kanda">kanda</option>
+<option name="brazil" id="brazil" value="brazil">brazil</option>
+<option name="londan" id="londan" value="londan">londan</option>
+
+
+
+
+</select></td>
+
+<td><input type="button" value="submit"  onclick='price()'/></td>
+<td><a href="reserve.html"  ><input type="button" value="reserve" value="reserve" /></a></td>
+ 			 
+			</tr>
+			
+		</table>
+</div></center>
+<script>
+function price()
+{
+  var cairo =document.getElementById('cairo').value;
+  var alex =document.getElementById('alex').value;
+
+   var sinai =document.getElementById('sinai').value;
+  var  USA =document.getElementById('USA').value; 
+   
+	var turkeya =document.getElementById('turkeya').value;
+   var londan=document.getElementById('londan').value;
+    var kanda=document.getElementById('kanda').value;
+	
+	 var brazil =document.getElementById('brazil').value;
+	
+	
+	
+  
+  
+  var select = document.getElementById('select').value;
+  if(select == cairo)
+  {
+  alert("fly=1200 $\nbus=1000$ ");
+  }
+  else
+  
+   if(select == alex)
+   {
+   alert("fly=1200$ \n bus=100$ ");
+   }
+   else
+    if(select ==sinai)
+   {
+   alert("fly=1200$ \n bus=500$ ");
+   } 
+  else
+   if(select ==USA)
+   {
+   alert("fly=12000$ \n bus=no bus ");
+   }
+   else
+    if(select ==turkeya)
+   {
+   alert("fly=15000$ \nbus=no bus ");
+   } 
+    else
+    if(select ==kanda)
+   {
+   alert("fly=2000$ \n bus=no bus ");
+   } 
+   else
+    if(select ==londan)
+   {
+   alert("fly=23000$ \n bus=no bus ");
+   } 
+   else
+ if(select ==brazil)
+   {
+   alert("fly=25000$ \n bus=no bus ");
+   } 
+ else
+ alert("please choose country !"); 
+     
+    
+ 
+}
+</script>
+	</body>
+</html>

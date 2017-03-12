@@ -1,0 +1,179 @@
+<html>
+<head>
+<link href="style2.css" rel="stylesheet"/>
+<body style="font-size:30px">
+<div class="body">
+ <div class="nav">
+    <div class="container">
+	<ul>
+	  <li><a href="home.html">Home</a></li>
+	  <li><a href="about.html">About</a></li>
+	  <li><a href="contact us.html">sign up</a></li>
+	  <li><a href="log in.html">log in</a></li>
+	 
+	</ul>
+
+    </div>
+    </div>
+<div class="contact">
+ 
+ 
+ 
+<form      onSubmit="return nameShow() "   name="form"      action="reserve2.php"  method="post">
+<table>
+<tr>
+<td>name</td>
+<td><input type="text" name="name" id="name"  /></td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td><input type="email" name="mail" id="mail"/></td>
+</tr>
+<tr>
+<td>phone</td>
+<td><input   name="phone" id="phone"/></td>
+</tr>
+<tr>
+<td>country</td>
+<td><select id="country" name="country" >
+ 
+<option name="cairo"   value="cairo">cairo</option>
+
+<option name="ALex"   value="alex">Alex</option>
+<option name="sinai"   value="sinai">sinai</option>
+<option name="USA"   value="USA">USA</option>
+<option name="turkeya"   value="turkeya">turkeya</option>
+<option name="kanda"   value="kanda">kanda</option>
+<option name="brazil"   value="brazil">brazil</option>
+<option name="londan"   value="londan">londan</option>
+
+</select></td>
+</tr>
+
+<tr>
+<td>number of tickets</td>
+<td><input  type="number"  id="tickets" name="tickets" value="1" / ></td>
+</tr>
+
+<tr>
+<td>services</td>
+<td><select type="text" name="travel" / >
+<option value="high">high</option>
+<option value="meduim">meduim</option>
+</td>
+</tr>
+
+
+
+
+<tr>
+<td>any notes</td>
+<td><textarea type="textarea" name="notes"></textarea></td>
+</tr>
+<tr >
+<td ></td><td><input type="submit" value="save" name="save"     /></td>
+</tr>
+</table>
+ 
+</form>
+</div>
+</div>
+
+<!--form validation-->
+
+<script>
+function nameShow() 
+	{
+		var name = document.getElementById('name').value;
+		var alphabet = /^[a-zA-Z]/;
+		var email = document.getElementById('mail').value;
+		var emailValid = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+		 var phone = document.getElementById('phone').value;
+		 var phoneno = /^\d{10}$/;  
+		  var ph = isNaN(phone);
+		if(name==""    )
+{
+			alert('name unvalid!');
+			 
+			return false;   
+			
+}
+ 
+
+
+
+		else
+{
+			if (isNaN(name)) 
+			{
+			  
+		if(email=="")
+		{
+			alert('the email field is empty !');
+			   
+			return false;
+		  } 
+		   else
+		   {
+			if (email.match(emailValid)) 
+			{
+			   if(phone=="")
+   
+              {
+			alert('the phone field is empty !');
+			   
+			return false;
+	        	}
+			  else
+			  {
+			    if(ph == true) 
+			{
+			     alert('number unvalid enter numbers only');
+				return false;
+			}
+			  }
+			
+				 
+			}
+			 
+		}
+	}
+		
+ else 
+ {
+   alert('enter characters only !');
+   return false;
+ }
+}
+	 
+			
+			 
+			}	
+		 
+	 
+ 
+ 
+ 
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<html>
+<head>
+<link href="style2.css" rel="stylesheet"/>
+<body style="font-size:30px">
+<div class="body">
+ <div class="nav">
+    <div class="container">
+	<ul>
+	  <li><a href="home.html">Home</a></li>
+	  <li><a href="about.html">About</a></li>
+	  <li><a href="contact us.html">sign up</a></li>
+	  <li><a href="log in.html">log in</a></li>
+	 
+	</ul>
+
+    </div>
+    </div>
+<div class="contact">
+ 
+ 
+ 
+<form action="result.php" onSubmit="return nameShow() "  method="post">
+<table>
+<tr>
+<td>user name:</td>
+<td><input type="text" name="name" id="name" /></td>
+</tr>
+<tr>
+<td>E-mail</td>
+<td><input type="email" name="mail" id="mail"/></td>
+</tr>
+<tr>
+<td>password:</td>
+<td><input type="password" name="password" id="password"  /></td>
+</tr>
+ 
+<tr>
+<td>phone</td>
+<td><input type="phone" name="phone" id="phone"   /></td>
+</tr>
+<tr >
+<td ></td><td><input  type="submit" value="save" name="save" /></td>
+</tr>
+</table>
+</form>
+</div>
+</div>
+
+<script>
+function nameShow() 
+	{
+		var name = document.getElementById('name').value;
+		var alphabet = /^[a-zA-Z]/;
+		var email = document.getElementById('mail').value;
+		var emailValid = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+		 var phone = document.getElementById('phone').value;
+		 var phoneno = /^\d{10}$/;  
+		if(name==""    )
+{
+			alert('name unvalid!');
+			 
+			return false;   
+			
+}
+ 
+
+
+
+		else
+{
+			if (isNaN(name)) 
+			{
+			  
+		if(email=="")
+		{
+			alert('the email field is empty !');
+			   
+			return false;
+		  } 
+		   else
+		   {
+			if (email.match(emailValid)) 
+			{
+			   if(phone=="")
+   
+              {
+			alert('the phone field is empty !');
+			   
+			return false;
+	        	}
+			  else
+			  {
+			   if( phone.match(phoneno)) 
+			{
+			    
+				return true;
+				
+			}
+			 
+			 
+			 
+			 
+			  }
+			 
+				 
+			}
+			 
+		}
+	}
+		
+ else 
+ {
+   alert('enter characters only !');
+   return false;
+ }
+}
+	 
+			
+			 
+			}	
+		 
+	 
+ 
+ 
+ 
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
